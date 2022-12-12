@@ -1,0 +1,237 @@
+package calci;
+import java .util.Scanner;
+
+ class A {
+	 
+	 int a,b;
+	 Scanner sa=new Scanner(System.in);
+	 
+	 int add() {
+		 System.out.println("Enter two number for Addition:");
+		 a=sa.nextInt();
+		 b=sa.nextInt();
+	 return(a+b);
+}
+	 int sub() {
+		 System.out.println("Enter two number for Subtraction:");
+		 a=sa.nextInt();
+		 b=sa.nextInt();
+	return(a-b);
+	 }
+	 int mult() {
+		 System.out.println("Enter two number for Multiplication:");
+		 a=sa.nextInt();
+		 b=sa.nextInt();
+	return(a*b);
+	}
+	 int div() {
+		 System.out.println("Enter two number for Division:");
+		 a=sa.nextInt();
+		 b=sa.nextInt();
+	return(a/b);	 
+	 }
+	 int mod() {
+		 System.out.println("Enter two number for Modulus:");
+		 a=sa.nextInt();
+		 b=sa.nextInt();
+	return(a%b);
+			 
+}
+	 
+	 void normal() {
+		 
+		 Scanner s=new Scanner(System.in);
+		 System.out.println("1.Addition :");
+		 System.out.println("2.Subtraction :");
+		 System.out.println("3.Multiplication :");
+		 System.out.println("4.Division :");
+		 System.out.println("5.Modulus :");
+		System.out.print("Choose Operation to be Performed   :");
+
+		 int n=s.nextInt();
+		 int ans=0;
+		 switch(n) {
+		 
+		 case 1:
+			 ans= add();
+			 break;
+			 
+		 case 2:
+			 ans= sub();
+			 break;
+			 
+		 case 3:
+			 ans=mult();
+			 break;
+			
+		 case 4:
+			 ans= div();
+			 break;
+		
+		 case 5:
+			 ans= mod();
+			 break;
+		
+		default:
+			System.out.println("Invalid Choice!! Please Select a Valid Operation ");
+		  }
+		 System.out.println("Answere  =" + ans);
+		 s.close();
+}
+	 
+	 int pow() {
+		 System.out.println("Enter two numbers for power  :");
+		 a =sa.nextInt();
+		 b=sa.nextInt();
+	 return((int)Math.pow(a, b));
+	 }
+	 
+	 int sqrt() {
+		 System.out.println("Enter the number for Square Root   :");
+		 a=sa.nextInt();
+	 return((int)Math.sqrt(a));
+	 }
+	 
+	 int max() {
+		 System.out.println("Enter two numbers to find which is Maximum   :");
+		 a =sa.nextInt();
+		 b=sa.nextInt();
+	return(Math.max(a, b));
+    }
+	 int min() {
+		 System.out.println("Enter two numbers to find which is Minimum   :");
+		 a =sa.nextInt();
+		 b=sa.nextInt();
+	return(Math.min(a, b));
+    }
+	
+	int factorial() {
+		System.out.println("Enter the number to find the Factorial!  :");
+		 a =sa.nextInt();
+		 int fact=1;
+		 for(int i=1;i<=a;i++) {
+			 fact=fact*i;
+		 }
+	return (fact);
+
+	}
+	int sin() {
+		System.out.println("Enter the number  :");
+		a=sa.nextInt();
+	return((int)Math.sin(a));
+	}
+	int cos() {
+		System.out.println("Enter the number  :");
+		a=sa.nextInt();
+	return((int)Math.cos(a));
+	}
+	int tan() {
+		System.out.println("Enter the number  :");
+		a=sa.nextInt();
+	return((int)Math.tan(a));
+	}
+	int aoc() {
+		double pi =3.14;
+		System.out.println("Enter the Radius for the Circle :");
+        a=sa.nextInt();
+        double area=pi*(a*a);
+        System.out.println("The area of the Circle is  :"+area);
+}
+	int log() {
+		System.out.println("Enter the number  :");
+		a=sa.nextInt();
+	return((int)Math.log(a));
+	}
+	 
+	 void scientific() {
+		 
+		Scanner sb=new Scanner(System.in);
+		System.out.println("1.Power");
+		System.out.println("2.Square Root");
+		System.out.println("3.Maximum");
+		System.out.println("4.Minimum");
+		System.out.println("5.Factorial");
+		System.out.println("6.Sin Function");
+		System.out.println("7.Cos Function");
+		System.out.println("8.Tan Function");
+		System.out.println("9.Area of Circle");
+		System.out.println("10.Logarithm");
+		System.out.print("Enter Your Choice  :");
+		int m=sb.nextInt();
+		int ans=0;
+		
+		switch(m) {
+		
+		case 1:
+			ans=pow();
+			break;
+		
+		case 2:
+			ans=sqrt();
+			break;
+		case 3:
+			ans=max();
+			break;
+		case 4:
+			ans=min();
+			break;
+		case 5:
+			ans=factorial();
+			break;
+		case 6:
+			ans=sin();
+			break;
+		case 7:
+			ans=cos();
+			break;
+		case 8:
+			tan();
+		    break;
+		case 9:
+			ans=aoc();
+			break;
+		case 10:
+			ans=log();
+			break;
+		default:
+		System.out.println("Enter a valid Option  :");
+}
+		 System.out.println("Answere  = " + ans);
+		 sb.close();
+ }
+	 
+	 
+
+	 
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("1.Normal Calculator :");
+		System.out.println("");
+		System.out.println("2.Scientific Calculator :");
+		System.out.println("");
+        System.out.print("*Enter Your Choice  :");
+		int ch=sc.nextInt();
+	    A obj=new A();
+		
+		switch(ch) {
+			
+		case 1:
+			obj.normal();
+			break;
+		
+		case 2:
+			obj.scientific();
+			break;
+			
+		default:
+			System.out.println("Invalid Choice");
+			
+			
+			
+		
+	}	
+    sc.close();	
+      } 
+         }
