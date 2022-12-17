@@ -1,0 +1,126 @@
+package atm123;
+import java.util.Scanner;
+public class Atm {
+	Scanner sc=new Scanner(System.in);
+	static Atm obj=new Atm();
+	public int s=0;
+	public static  int a;
+	
+	
+	//BALANCE ENQUIRY
+	public void viewbal() {
+		
+		// System.out.println("*************************************************");
+		 System.out.println("---------------------------------------------");
+		System.out.println("Your Balance is:"+s);
+		 //System.out.println("*************************************************");
+		 System.out.println("---------------------------------------------");
+		 repeat();
+	}
+	
+	
+	//DEPOSIT CASH
+	public void depcash() {
+		
+		 //System.out.println("*************************************************");
+		 System.out.println("---------------------------------------------");
+		System.out.println("Enter the Amount You want to Deposit:");
+		int c=sc.nextInt();
+		System.out.println("Your Amount has been Deposited Succesfully your updated balance is"+" "+ (s+c));
+		// System.out.println("*************************************************");
+		 System.out.println("---------------------------------------------");
+		 repeat();
+	}
+	
+	
+	//WITHDRAW CASH
+	public void witcash() {
+		
+		 //System.out.println("*************************************************");
+		 System.out.println("---------------------------------------------");
+		 System.out.println("Enter the Amount You want to Withdraw:");
+		 int d=sc.nextInt();
+		 if(d<s) {
+			System.out.println("Amount has been Withdrawn Succesfully, your updated balance is"+ " "+(s-d));
+			
+			 //System.out.println("*************************************************");
+			 System.out.println("---------------------------------------------");}
+		 else
+		 {System.out.println("You have Insufficient Balance:");
+		 System.out.println("---------------------------------------------");
+		// System.out.println("*************************************************");
+		 }
+			repeat();
+   }
+	
+	
+	//EXIT()
+	void exit() {
+		System.out.println("Thank You for Using our Banking Services!!");
+		System.exit(0);
+	}
+	
+	
+	//REPEAT()
+	public void repeat() {
+		 System.out.println("Do you want to continue:(Y/N ?):");
+		 Scanner se=new Scanner(System.in);
+		 String x;
+		 x=se.nextLine();	
+		 if(x=="Y"||x=="y") {
+			 valid();			 
+		 }
+		 else {
+			 exit();
+			 
+		 }se.close();
+	 }
+	
+	
+	//MENU 
+	 public void valid() {
+		
+		 System.out.println("---------------------------------------------");
+		 System.out.println("Choose the operation You want to perform");
+		 System.out.println("1.Balance Enquiry:");
+		 System.out.println("2.Deposit Cash:");
+		 System.out.println("3.Withdraw Cash:");
+		 System.out.println("4.Exit:");
+         System.out.println("----------------------------------------------");
+         
+		 int b=sc.nextInt();
+		 switch(b) {
+		 
+		 case 1:
+			 viewbal();
+			 break;
+		 case 2:
+			 depcash();
+			 break;
+		 case 3:
+			 witcash();
+			 break;
+		 case 4:
+			  exit();
+			 
+		 }
+	 }
+	 
+	
+  //main method
+	public static void main(String[] args) {
+		Scanner sa=new Scanner(System.in);
+		 System.out.println("------------------------------WELCOME TO FEDRAL BANK --------------------------------------------");
+		 System.out.println("");
+     System.out.println("Please Enter Your 5 Digit Account Number to Begin:");
+      a=sa.nextInt(); 
+     if(a>10000&&a<99999) {
+    	 obj.valid();
+    	 }
+     else {
+    	 System.out.println("Invalid Account Number:");
+     }
+     sa.close();
+	}
+
+}
