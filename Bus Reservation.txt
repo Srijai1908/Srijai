@@ -1,0 +1,313 @@
+package test123;
+import java.util.Scanner;
+public class Final {
+	public int a,b,c,d,e,x;
+	String y;
+
+	
+	
+	public void res() {
+		System.out.println("Please Select a Source City ");
+		System.out.println("1.Mumbai");
+		System.out.println("2.Chennai");
+		System.out.println("3.Delhi");
+		System.out.println("4.Hyderabad");
+		Scanner sa=new Scanner(System.in);
+		 a=sa.nextInt();
+		if(a==1) {
+			mumbai();
+		}
+		else if(a==2) {
+			chennai();
+		}
+		else if(a==3) {
+			delhi();
+		}
+		else if(a==4) {
+			hyd();
+		}
+		else {
+			System.out.println("Invalid Choice");
+		}
+}
+	
+	
+	//A
+	void A() {
+		if(c==1) {
+		System.out.println("Your ticket to Chennai for "+y+" is been booked Succesfully");
+		System.out.println("");
+	             }
+		else if(c==2) {
+			System.out.println("Your ticket to Delhi for "+y+" is been booked Succesfully");
+			System.out.println("");
+                 }
+		else if(c==3) {
+			System.out.println("Your ticket to Hyderabad for "+y+" is been booked Succesfully");
+			System.out.println("");
+                    }
+		else {
+			System.out.println("Invalid chioce");
+			System.out.println(" ");
+			
+		}
+		}
+	
+	//MUMBAI
+	public void mumbai() {
+		System.out.println("Select your Destination City");
+		System.out.println("1.Chennai");
+		System.out.println("2.Delhi");
+		System.out.println("3.Hyderabad");
+		Scanner sc=new Scanner(System.in);
+		 c=sc.nextInt();
+		System.out.println("Please Mention the date  :");
+		 d=sc.nextInt();
+		System.out.println("Please Mention the Month");
+		 e=sc.nextInt();
+		 y=d+"-"+e;
+		if(d<32 && e<13) {
+		        A();
+		        System.out.println("");
+		        repeat();
+		}
+		else {
+			System.out.println("Enter a valid month and date");
+		}
+		
+	}
+	
+	
+	//B
+	void B() {
+		if(c==1) {
+			System.out.println("Your ticket to Mumbai for "+y+" is been booked Succesfully");
+			System.out.println("");
+		             }
+			else if(c==2) {
+				System.out.println("Your ticket to Delhi for "+y+" is been booked Succesfully");
+				System.out.println("");
+	                 }
+			else if(c==3) {
+				System.out.println("Your ticket to Hyderabad for "+y+" is been booked Succesfully");
+				System.out.println("");
+	                    }
+			else {
+				System.out.println("Invalid chioce");
+				System.out.println(" ");
+				
+			}
+		
+	}
+	
+	//CHENNAI
+	public void chennai() {
+		System.out.println("Select your Destination City");
+		System.out.println("1.Mumbai");
+		System.out.println("2.Delhi");
+		System.out.println("3.Hyderabad");
+		Scanner sc=new Scanner(System.in);
+		 c=sc.nextInt();
+		System.out.println("Please Mention the date  :");
+		 d=sc.nextInt();
+		System.out.println("Please Mention the Month");
+		 e=sc.nextInt();
+		y=d+"-"+e;
+		if(d<32 && e<13) {
+		     B();
+		     System.out.println("");
+		     repeat();
+		}
+		else {
+			System.out.println("Enter a valid month and date");
+		}
+		
+	}
+	
+	//C
+	public void C() {
+		if(c==1) {
+			System.out.println("Your ticket to Mumbai for "+y+" is been booked Succesfully");
+			System.out.println("");
+		             }
+			else if(c==2) {
+				System.out.println("Your ticket to Chennai for "+y+" is been booked Succesfully");
+				System.out.println("");
+	                 }
+			else if(c==3) {
+				System.out.println("Your ticket to Hyderabad for "+y+" is been booked Succesfully");
+				System.out.println("");
+	                    }
+			else {
+				System.out.println("Invalid chioce");
+				System.out.println(" ");
+				
+			}
+	}
+	
+	
+	//Delhi
+	public void delhi() {
+		System.out.println("Select your Destination City");
+		System.out.println("1.Mumbai");
+		System.out.println("2.Chennai");
+		System.out.println("3.Hyderabad");
+		Scanner sc=new Scanner(System.in);
+		 c=sc.nextInt();
+		System.out.println("Please Mention the date  :");
+		 d=sc.nextInt();
+		System.out.println("Please Mention the Month");
+		 e=sc.nextInt();
+		 y=d+"-"+e;
+		if(d<32 && e<13) {
+		         C();
+		         System.out.println("");
+		         repeat();
+		         
+		}
+		else {
+			System.out.println("Enter a valid month and date");
+		}
+		
+		
+	}
+	
+	//D
+	public void D() {
+		if(c==1) {
+			System.out.println("Your ticket to Mumbai for "+y+" is been booked Succesfully");
+			System.out.println("");
+		             }
+			else if(c==2) {
+				System.out.println("Your ticket to Chennai for "+y+" is been booked Succesfully");
+				System.out.println("");
+	                 }
+			else if(c==3) {
+				System.out.println("Your ticket to Delhi for "+y+" is been booked Succesfully");
+				System.out.println("");
+	                    }
+			else {
+				System.out.println("Invalid chioce");
+				System.out.println(" ");
+				
+			}
+		
+	}
+	
+	//hyd
+	public void hyd() {
+		System.out.println("Select your Destination City");
+		System.out.println("1.Mumbai");
+		System.out.println("2.Chennai");
+		System.out.println("3.Delhi");
+		Scanner sc=new Scanner(System.in);
+		 c=sc.nextInt();
+		System.out.println("Please Mention the date  :");
+		int d=sc.nextInt();
+		System.out.println("Please Mention the Month");
+		int e=sc.nextInt();
+		 y=d+"-"+e;
+		if(d<32 && e<13) {
+		      D();
+		      System.out.println("");
+		      repeat();
+		      }
+		else {
+			System.out.println("Enter a valid month and date");
+		}
+		
+		
+	}
+	
+	
+	//EXIT
+	
+	void exit() {
+		System.out.println("***************************Thank you have a Pleaseant Journey!!*************************************");
+		System.exit(0);
+	}
+	
+	
+	
+	
+	//REPEAT
+	public void repeat() {
+		 System.out.println("Press 1 to Continue or 0 to Exit:");
+		// System.out.print("");
+		 Scanner se=new Scanner(System.in);
+
+		 x=se.nextInt();	
+		 if(x==1) {
+			res ();			 
+		 }
+		 else {
+			 exit();
+			 
+		 }
+	}
+	
+	//CUSTOMER SUPPORT
+	
+	public void cust() {
+		System.out.println("You can Reach us at +91 8456828725/022-6598659865");
+		System.out.println("You can even write us at bluebuspvtltd@gmail");
+	}
+	
+	
+	//ABOUT
+	public void about() {
+		System.out.println("Blue bus was Founded in the year 2020,We are now operational in only 4 Routes,Head Quarters Located in Mumbai (400075) ");
+		System.out.print("");
+			}
+	
+	
+	
+	
+	//MENU 
+	
+public void menu()
+	{
+		System.out.println("---------------------------Welcome to BLUE BUS-------------------------------");
+		Scanner sb=new Scanner(System.in);
+		
+		System.out.println("1.Ticket Reservation");
+		System.out.println("2.Customer Support");
+		System.out.println("3.About us!!!");
+	    b=sb.nextInt();
+		if(b==1) {
+		          res();
+		}
+		else if(b==2) {
+			cust();
+			System.out.println("");;
+			repeat();
+			
+		}
+		else if(b==3) {
+			
+			about();
+			System.out.println(" ");
+			repeat();
+			
+		}
+		else {
+			System.out.println("Invalid Choice");
+			System.out.println("");
+			repeat();
+		}
+		
+		
+		
+	}	
+	
+	
+	
+//MAIN METHOD	
+public static void main(String[] args) {
+	 Final obj=new Final();
+	 obj.menu();
+		
+
+	}
+
+}
