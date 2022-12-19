@@ -1,0 +1,24 @@
+package test123;
+import java.util.Scanner;
+public class Pra2b {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int num2;
+		String num1;
+		
+		System.out.println("Enter the Binary number:");
+		num1=sc.nextLine();
+		System.out.println("Enter the Decimal number:");
+		num2=sc.nextInt();
+		System.out.println("The decimal number value of binary is "+Integer.parseInt(num1,2));
+		
+	
+		//System.out.println("Enter the Binary number:");
+	
+        System.out.println(" The Binary Value of Decimal  is:"+Integer.toBinaryString(num2));
+
+	}
+
+}
