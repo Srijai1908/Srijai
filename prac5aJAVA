@@ -1,0 +1,32 @@
+package test;
+import java.util.Scanner;
+
+
+
+public class Operator {
+ 	int a,b,sum;
+
+	void menu() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the First number :");
+		a=sc.nextInt();
+		System.out.println("Enter the Second number:");
+		b=sc.nextInt();
+	}
+           
+}
+class Addition extends Operator {
+	
+	int add() {
+		
+		sum=a+b;
+	return(sum);
+	}
+	public static void main(String[] args) {
+		Addition obj=new Addition();
+		obj.menu();
+		obj.add();
+	}
+	
+	
+}
