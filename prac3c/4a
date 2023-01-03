@@ -1,0 +1,54 @@
+package prj;
+import java.util.Scanner;
+
+public class Prac4a {
+	
+	public static void inputArray(int[] array) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Elements of Array");
+	for(int i=0;i<array.length;i++) {
+	array[i]=sc.nextInt();
+	}
+	System.out.println("The Elements of Array is:");
+	for(int i=0;i<array.length;i++) {
+            System.out.println(array[i]+" ");		
+	}
+	}
+  
+	public static void sort(int[] array) {
+		for(int i=0;i<array.length;i++) {
+			for(int j=i+1;j<array.length;j++) {
+				int temp=0;
+				if(array[i]>array[j]) {
+					temp=array[i];
+					array[i]=array[j];
+					array[i]=temp;
+				}
+			}
+		}
+	System.out.println();
+	System.out.println("Sorted array is:-");
+	for(int i=0;i<array.length;i++) {
+		System.out.println(array[i]+ " ");
+	}
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+	
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of the Array");
+		int n=sc.nextInt();
+		int[] arr=new int[n];
+		
+		inputArray(arr);
+		sort(arr);
+		System.out.println("The largest element in array is :"+arr[n-1]);
+		System.out.println("The smallest element in array is :"+arr[0]);
+		
+
+	}
+
+}
