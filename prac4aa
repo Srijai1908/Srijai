@@ -1,0 +1,64 @@
+package firstpackage;
+import java.util.Scanner;
+
+public class prac4a {
+	int i,j,temp;
+	Scanner sc=new Scanner(System.in);
+	int n;
+	int arr[]=new int[n];
+	
+	
+	void asec() {
+		for(i=0;i<arr.length;i++) {
+			for(j=i;j<arr.length;j++) {
+				if(arr[i]>arr[j]) {
+					 temp=arr[i];
+					arr[i]=arr[j];
+				}
+				
+			}System.out.println("The asccending order forthr array is:"+" "+arr[i]);
+		}
+		
+	}
+	void desc() {
+		for(i=0;i<arr.length;i++) {
+			for(j=i;j<arr.length;j++) {
+				if(arr[i]<arr[j]) {
+					 temp=arr[i];
+					arr[i]=arr[j];
+	}
+			}
+		}System.out.println("The descending order for the array is:"+" "+arr[i]);
+	}
+	
+	
+
+	public static void main(String[] args) {
+       int i;
+       Scanner sc=new Scanner(System.in);
+
+     System.out.println("Enter the Size of the Array");  
+     
+     int n=sc.nextInt();;
+   	 int[] arr=new int[n];
+		
+	System.out.println("Enter the "+" "+n +" "+ " Elements ");
+		
+		for(i=0;i<arr.length;i++) {
+		  arr[i]=sc.nextInt();
+		}
+		
+		System.out.println("The Elements You Entered Are :");
+		
+		for(i=0;i<arr.length;i++) {
+			System.out.println(arr[i]);
+		}
+		prac4a obj=new prac4a();
+		obj.asec();
+		obj.desc();
+		
+		
+
+	}
+
+}
